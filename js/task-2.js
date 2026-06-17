@@ -30,12 +30,13 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 function addGallery(arr) {
+  let newGallery;
   arr.forEach((item) => {
-    const image = ` <li class="gallery-item">
-      <img src="${item.url} alt="${item.alt} width="360" height="300">
+    newGallery += `<li class="gallery-item">
+      <img src="${item.url}" alt="${item.alt}" width="360" height="300">
       </li>`;
-    gallery.insertAdjacentHTML('afterbegin', image);
   });
+  gallery.insertAdjacentHTML('afterbegin', newGallery);
 }
 
 addGallery(images);
