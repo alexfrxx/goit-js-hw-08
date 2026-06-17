@@ -30,7 +30,7 @@ const images = [
 const gallery = document.querySelector('.gallery');
 
 function addGallery(arr) {
-  let newGallery;
+  let newGallery = '';
   arr.forEach((item) => {
     newGallery += `<li class="gallery-item">
       <img src="${item.url}" alt="${item.alt}" width="360" height="300">
